@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;.bg-ex-fixed
+}
+.bg-ex-gradient-animation{
+  background:linear-gradient(200deg,#f311a8,#5f1b9e); /* Цвета градиента */
+  background-size:500% 500%;
+  -webkit-animation:ServiceAnimation 10s ease infinite;
+  -moz-animation:ServiceAnimation 10s ease infinite;
+  -o-animation:ServiceAnimation 10s ease infinite;
+  animation:ServiceAnimation 10s ease infinite; /* Время смены цвета */
+}
+@-webkit-keyframes ServiceAnimation{0%
+  {background-position:90% 0}50%
+  {background-position:10% 100%}100%
+  {background-position:90% 0}
+}
+@-moz-keyframes ServiceAnimation{0%
+  {background-position:90% 0}50%
+  {background-position:10% 100%}100%
+  {background-position:90% 0}
+}
+@-o-keyframes ServiceAnimation{0%
+  {background-position:90% 0}50%
+  {background-position:10% 100%}100%
+  {background-position:90% 0}
+}
+@keyframes ServiceAnimation{0%
+  {background-position:90% 0}50%
+  {background-position:10% 100%}100%
+  {background-position:90% 0}
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 16px;
+    background-color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #52ee8e, #3ca8e7, #9d23d5, #d52391);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+</style>
+</head>
+<body class="bg-ex-gradient-animation">
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Регистрация</h1>
+    <p>Пожалуйста заполните форму, для того что бы создать аккаунт.</p>
+    <hr>
+
+    <label for="email"><b>Ваш Email</b></label>
+    <input type="text" placeholder="Email" name="email" required>
+
+    <label for="psw"><b>Пароль</b></label>
+    <input type="password" placeholder="Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Повторите пароль</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p>Обязательно прочитайте <a href="#">Политику конфиденциальности</a>.</p>
+    <input type="checkbox" name="a" value="1" checked> Я соглашаюсь с политикой конфиденциальности 
+            <input type="checkbox" name="a" value="2">Я не робот
+    <button type="submit" class="registerbtn">Зарегистрироваться</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Уже есть аккаунт? <a href="#">Войти</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
